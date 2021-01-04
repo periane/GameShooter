@@ -1,0 +1,8 @@
+Cadrage du projet Game shooter
+
+-positionner le vaiseau du joueur en haut 
+-permettre le deplacement du joueur de la gauche -> droite
+-Arrivée en vague(3-5/ vague)
+-Deplacement des enemis
+- Tirent des missiles
+- 
