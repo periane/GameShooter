@@ -4,7 +4,7 @@ Réalisation d'un jeu sous Unity 3D: Game Shooter
 
 ###UML Simplfié :
 
-####ntp_player
+### ntp_player
  - Speed: float = 10f
  - drag: float = 1
  - thrust: float
@@ -20,7 +20,7 @@ Réalisation d'un jeu sous Unity 3D: Game Shooter
  - ntp_Shoot(): void
  - ntp_FixedUpdate
  
-####ntp_ennemis
+### ntp_ennemis
  - Speed: float = 5f
  - vector2 speed
  - points: int = 10
@@ -36,7 +36,7 @@ Réalisation d'un jeu sous Unity 3D: Game Shooter
  - ntp_Fire(): void
  - ntp_Shoot(): void
  
-####ntp_gameManager
+### ntp_gameManager
  - state : States
  - level, score, lives: int
  - levelTxt, scoreTxt, livesTxt: Text, messageTxt: Text
@@ -57,15 +57,15 @@ Réalisation d'un jeu sous Unity 3D: Game Shooter
  - ntp_PlayerAgain(): IEnumerator
  - ntp_GameOver(): void
 
-####ntp_bullet
+### ntp_bullet
  - Update(): void
  - life: float = 3f
 
-####ntp_pauseManager
+### ntp_pauseManager
  - gameIsPaused: bool = false
  - Start(): void
  - Update(): void
  - ntp_PauseGame(): void
  
- #### waves (Enemi)
+ ### waves (Enemi)
 
