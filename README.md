@@ -67,5 +67,5 @@ Réalisation d'un jeu sous Unity 3D: Game Shooter
  - Update(): void
  - ntp_PauseGame(): void
  
- ### waves (Enemi)
+ ### waveEnemi
 
