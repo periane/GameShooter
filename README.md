@@ -56,7 +56,10 @@ Réalisation d'un jeu sous Unity 3D: Game Shooter
  - ntp_KillPlayer(): void
  - ntp_PlayerAgain(): IEnumerator
  - ntp_GameOver(): void
-
+### WapScreen 
+ - height, width :  float
+ - Start : void ()
+ - Update : void ()
 ### ntp_bullet
  - Update(): void
  - life: float = 3f
