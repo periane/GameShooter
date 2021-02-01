@@ -23,20 +23,20 @@ public class ntp_WrapScreen : MonoBehaviour
     {
         if (transform.position.x > width)
         {
-            transform.position = new Vector3(-width, transform.position.y, 0);
+            transform.position = new Vector3(width, transform.position.y, 0);
         }
         else if (transform.position.x < -width)
         {
-            transform.position = new Vector3(width, transform.position.x, 0);
+            transform.position = new Vector3(-width, transform.position.y, 0);
         }
 
         if (transform.position.y > height)
         {
-            transform.position = new Vector3(transform.position.x, -height, 0);
+            transform.position = new Vector3(transform.position.x, height, 0);
         }
         else if (transform.position.y < -height)
         {
-            transform.position = new Vector3(transform.position.x, height, 0);
+            transform.position = new Vector3(transform.position.x, -height, 0);
         }
     }
 }
