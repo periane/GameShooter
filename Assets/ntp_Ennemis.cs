@@ -6,12 +6,11 @@ public class ntp_Ennemis : MonoBehaviour
 {
 	public int points = 10;
 	int life = 3;
-
-	readonly float maxSpeed = 3f;
-	readonly float minSpeed = 1f;
 	float speed;
 	bool arret = true;
-	Bounds boundsAttackArea;
+	readonly float Speedmax = 5f;
+	readonly float Speedmin = 1f;
+	Bounds Attack;
 	Vector3 target;
 
 	public GameObject projectile;
@@ -34,11 +33,11 @@ public class ntp_Ennemis : MonoBehaviour
 		height = cam.orthographicSize;
 		width = height * cam.aspect;
 
-		speed = Random.Range(minSpeed, maxSpeed);
+		speed = Random.Range(Speedmin, Speedmax);
 
 		rb = GetComponent<Rigidbody2D>();
 
-		boundsAttackArea = ntp_gameManager.attackArea.GetComponent<BoxCollider2D>().bounds;
+		Attack = ntp_gameManager.attackArea.GetComponent<BoxCollider2D>().bounds;
 	}
 
 	void Update()
@@ -80,10 +79,10 @@ public class ntp_Ennemis : MonoBehaviour
 			ntp_Fire();
 			yield return new WaitForSecondsRealtime(3f);
 			arret = false;
-			//nouveau point aléatoire de l'aire d'attaque pour s'y diriger
+			//pont d'attaque random
 			target = new Vector3(
-			   Random.Range(boundsAttackArea.min.x, boundsAttackArea.max.x),
-			   Random.Range(boundsAttackArea.min.y, boundsAttackArea.max.y),
+			   Random.Range(Attack.min.x, Attack.max.x),
+			   Random.Range(Attack.min.y, Attack.max.y),
 			   0
 			);
 			target = ntp_gameManager.attackArea.GetComponent<BoxCollider2D>().ClosestPoint(target);
